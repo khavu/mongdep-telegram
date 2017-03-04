@@ -5,8 +5,6 @@ import random
 import database
 
 
-
-
 def listener(messages):
     print(messages)
     for m in messages:
@@ -16,8 +14,9 @@ def listener(messages):
             msgid = m.message_id
             print(m.from_user, msgid, text)
             if text.startswith('/mong'):
-
-                num = random.randrange(1, 859)
+                lst_id = database.select_db_option(table_name='thichngammong', field_selected='mong_id', condition='times_open < 1')
+                lst_id = list(lst_id[0])
+                num = random.choice(lst_id)
                 print(num)
                 url = database.select_db_option(table_name='thichngammong', field_selected='mong_link', condition='mong_id = {mong_id}'.format(mong_id=num))
                 url = url[0][0]
