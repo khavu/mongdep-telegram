@@ -6,7 +6,6 @@ import database
 
 
 def listener(messages):
-    print(messages)
     for m in messages:
         chat_id = m.chat.id
         if m.content_type == 'text':
@@ -16,11 +15,12 @@ def listener(messages):
             if text.startswith('/mong'):
                 lst_id = database.select_db_option(table_name='thichngammong', field_selected='mong_id', condition='times_open < 1')
                 lst_id = list(lst_id)
-                print(lst_id)
                 num = random.choice(lst_id)
+                num = num[0]
                 print(num)
                 url = database.select_db_option(table_name='thichngammong', field_selected='mong_link', condition='mong_id = {mong_id}'.format(mong_id=num))
                 url = url[0][0]
+                
                 f = open('out', 'wb')
                 f.write(urllib.request.urlopen(url).read())
                 f.close()
