@@ -20,7 +20,7 @@ def some_action(post):
 # You'll need an access token here to do anything.  You can get a temporary one
 # here: https://developers.facebook.com/tools/explorer/
 
-access_token = 'EAACEdEose0cBABtL9VWVoxZB8YzByjZBZC3lHnJ3EjWAUDHtkwI0B3QzhKZAHiSWyhGxfT7S7DaqZBAiQDNqAJgCEQklmzjSeaSWI2ezYQmm631Hsc6pEboXkJS6CJ7ZCrFeePDbPYhFctNbxXYcDKrQoxA6oQ290xSYJV0K2eVZCHjECjwm1uwpix53ImZB5esZD'
+access_token = 'EAACEdEose0cBAM390cZC71yb0YYy3e53WHYZALuAzYOaH8tkGahM9KCDpxbd2tT6m6uEztBKYEZCMOtiQ6HqrwH2BpaYIWwlmRj3W5sPxe1AIVRYAQ5eIwgskJyOt1V4RrnaC92qa8mZBwaPc4bX88IOiIZA5aai2bIPiIs0bZAyHLMBCdvAy6tVZAmUhn1QGgZD'
 user = 'thichngammong'
 
 graph = facebook.GraphAPI(access_token)

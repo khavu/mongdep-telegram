@@ -17,7 +17,7 @@ def listener(messages):
             print(m.from_user, msgid, text)
             if text.startswith('/mong'):
 
-                num = random.randrange(1, 858)
+                num = random.randrange(1, 859)
                 print(num)
                 url = database.select_db_option(table_name='thichngammong', field_selected='mong_link', condition='mong_id = {mong_id}'.format(mong_id=num))
                 url = url[0][0]
@@ -39,4 +39,4 @@ tb.set_update_listener(listener)  # register listener
 tb.polling()
 
 while True:
-    time.sleep(0)
+    time.sleep(1)
