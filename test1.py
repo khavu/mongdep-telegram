@@ -15,7 +15,7 @@ def listener(messages):
             print(m.from_user, msgid, text)
             if text.startswith('/mong'):
                 lst_id = database.select_db_option(table_name='thichngammong', field_selected='mong_id', condition='times_open < 1')
-                lst_id = list(lst_id[0])
+                lst_id = list(lst_id)
                 print(lst_id)
                 num = random.choice(lst_id)
                 print(num)
